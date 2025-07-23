@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Criando meta tag para quando a pessoa compartilhar o link do  site-->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="STUDIO AMANDA BEAUTY" />
+  <meta property="og:image" content="./assets/amanda_Logo.jpeg" />
+  <meta property="og:description" content="Beleza e bem-estar em cada detalhe." />
+  <meta property="og:site_name" content="STUDIO AMANDA BEAUTY" />
+
+  <!-- Link abaixo é o da fonte Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <!-- Esse link é de onde eu importei a figura do carrinho-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3r]rZj/k7ujTnHg4CGR2D7kSs®V4LLanw29ksYuRIEzO+tcaEPQgQKaoGNZ/zn28ImRDfuLWnOo7B=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/output.css" />
+  <style>
+    .service-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      margin-bottom: 2rem;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .service-content {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .service-description {
+      font-size: 0.95rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+      line-height: 1.5;
+    }
+
+    .service-price {
+      font-weight: bold;
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .service-button {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      font-size: 0.9rem;
+    }
+
+    .service-button:hover {
+      background-color: #333;
+    }
+
+    .services-grid {
+      row-gap: 3rem;
+    }
+
+    /* Ajustes para telas de notebook */
+    @media (min-width: 1024px) {
+      .services-grid {
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 90%;
+      }
+    }
+
+    /* Ajustes para telas maiores */
+    @media (min-width: 1280px) {
+      .services-grid {
+        margin-left: 10%;
+        margin-right: 10%;
+        max-width: 80%;
+      }
+    }
+  </style>
+  <title>AMANDA BORGES - CLINIC E BEAUTY</title>
+</head>
+
+<body>
+  <!-- Priemiro passo é criar a logo -->
+  <header class="w-full h-[420px] bg-black bg-home bg-cover bg-center">
+    <div class="w-full h-full flex flex-col justify-center items-center ">
+      <div class="max-w-xs max-h-xs "> <!-- Adicionando um contêiner com tamanho máximo -->
+        <img src="./assets/amanda_Logo.jpeg" alt="Studio Amanda Beauty"
+          class="w-32 h-36  rounded-full shadow-lg hover:scale-110 duration-200" />
+      </div>
+      <div class="bg-gray-500 px-4 text-center mt-3 mb-3 rounded-full border border-gray-300">
+        <h1 class="text-white font-medium">
+          AMANDA BORGES - CLINIC E BEAUTY
+        </h1>
+      </div>
+
+
+
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Aqui é o fim do  cabeçalho -->
+
+  <!-- Aqui inicia o texto pré-menu-->
+  <h2 class="text-2xl font-bold md:text-3xl text-center mt-9 mb-6">
+    Conheça nossos serviços:
+  </h2>
+  <!-- Aqui vai ser detalhado os serviços -->
+  <div id="menu">
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto px-4 mb-16 services-grid">
+      <!-- Lash Lifting -->
+      <div class="service-card">
+        <img src="./assets/lash_lifiting.jpeg" alt="Lash Lifting" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">LASH LIFTING</h3>
+          <p class="service-description">Tratamento para cílios que hidrata, nutre, estimula o crescimento e deixa os cílios curvados com efeito de rímel. Duração média: 5 semanas.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$140,00</p>
+            <button class="service-button add-to-cart-btn" data-name="LASH LIFTING" data-price="140.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design + Henna -->
+      <div class="service-card">
+        <img src="./assets/desing_mais_henna_ou_coloracao.jpeg" alt="Design + Henna" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">DESIGN + HENNA</h3>
+          <p class="service-description">Pigmentação temporária que realça as sobrancelhas de forma prática e rápida, podendo ser retocada a cada 15 dias. Duração média: 30 dias.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$70,00</p>
+            <button class="service-button add-to-cart-btn" data-name="DESIGN + HENNA" data-price="70.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Protocolo de Crescimento -->
+      <div class="service-card">
+        <img src="./assets/protocolo_de_crescimento.jpeg" alt="Protocolo de Crescimento" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">PROTOCOLO DE CRESCIMENTO</h3>
+          <p class="service-description">Microagulhamento com ativos de crescimento associado a LEDterapia para fortalecer e recuperar os fios, deixando as sobrancelhas mais cheias e volumosas.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$100,00</p>
+            <button class="service-button add-to-cart-btn" data-name="PROTOCOLO DE CRESCIMENTO" data-price="100.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Limpeza de Pele -->
+      <div class="service-card">
+        <img src="./assets/limpeza_de_pele.jpeg" alt="Limpeza de Pele" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">LIMPEZA DE PELE</h3>
+          <p class="service-description">Procedimento completo com higienização, esfoliação, remoção de cravos, massagem e máscara calmante. Duração: 30 dias (pele mista/oleosa).</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$150,00</p>
+            <button class="service-button add-to-cart-btn" data-name="LIMPEZA DE PELE" data-price="150.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nanoblading -->
+      <div class="service-card">
+        <img src="./assets/nanoblading.jpeg" alt="Nanoblading" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">NANOBLADING</h3>
+          <p class="service-description">Técnica de micropigmentação que simula fios naturais através da implantação de nano pigmento. Duração média: 1 ano.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$600,00</p>
+            <button class="service-button add-to-cart-btn" data-name="NANOBLADING" data-price="600.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dermaplaning -->
+      <div class="service-card">
+        <img src="./assets/dermaplaning.jpeg" alt="Dermaplaning" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">DERMAPLANING</h3>
+          <p class="service-description">Procedimento estético que utiliza lâmina cirúrgica para esfoliar a camada superficial da pele, removendo células mortas e pelos do rosto.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$100,00</p>
+            <button class="service-button add-to-cart-btn" data-name="DERMAPLANING" data-price="100.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Revitalização Labial -->
+      <div class="service-card">
+        <img src="./assets/revitalização_labial.jpeg" alt="Revitalização Labial" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">REVITALIZAÇÃO LABIAL</h3>
+          <p class="service-description">Procedimento que proporciona cor aos lábios de forma natural, uniformizando e realçando o tom. Duração média: 12 meses.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$285,00</p>
+            <button class="service-button add-to-cart-btn" data-name="REVITALIZAÇÃO LABIAL" data-price="285.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidra Gloss -->
+      <div class="service-card">
+        <img src="./assets/hidragloss.jpeg" alt="Hidra Gloss" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">HIDRA GLOSS</h3>
+          <p class="service-description">Hidratação profunda à base de ácido hialurônico e mix de vitaminas que hidrata, nutre e preenche as linhas finas.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$85,00</p>
+            <button class="service-button add-to-cart-btn" data-name="HIDRA GLOSS" data-price="85.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Design de Sobrancelhas -->
+      <div class="service-card">
+        <img src="./assets/design_sobrancelhas.jpeg" alt="Design de Sobrancelhas" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">DESIGN DE SOBRANCELHAS</h3>
+          <p class="service-description">Procedimento personalizado através do visagismo e características pessoais para valorizar todo o conjunto da face.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$45,00</p>
+            <button class="service-button add-to-cart-btn" data-name="DESIGN DE SOBRANCELHAS" data-price="45.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brow Lamination -->
+      <div class="service-card">
+        <img src="./assets/brow_lamination.jpeg" alt="Brow Lamination" class="service-image" />
+        <div class="service-content">
+          <h3 class="service-title">BROW LAMINATION</h3>
+          <p class="service-description">Técnica que promove o alongamento e alinhamento dos fios das sobrancelhas, dando mais volume e definição. Duração: 3-4 semanas.</p>
+          <div class="flex items-center justify-between">
+            <p class="service-price">R$150,00</p>
+            <button class="service-button add-to-cart-btn" data-name="BROW LAMINATION" data-price="150.00">
+              <i class="fa fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- Aqui começa a part onde voce Finaliza o Pedido -->
+  <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99]  items-center justify-center hidden" id="cart-modal">
+    <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+      <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho: </h2>
+      <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+      <p class="font-bold"> Total: <span id="cart-total">0.00</span></p>
+      
+      <div class="mt-4 space-y-4">
+        <div>
+          <p class="font-bold mb-1">Forma de Pagamento:</p>
+          <select id="personalise" class="w-full border-2 p-1 rounded my-1">
+            <option value="">Selecione a forma de pagamento</option>
+            <option value="PIX">PIX</option>
+            <option value="Cartão de Crédito">Cartão de Crédito</option>
+            <option value="Cartão de Débito">Cartão de Débito</option>
+            <option value="Dinheiro">Dinheiro</option>
+          </select>
+          <p class="text-red-500 hidden" id="addres-warn">Selecione uma forma de pagamento por favor!</p>
+        </div>
+
+        <div>
+          <p class="font-bold mb-1">Data e Horário Desejados:</p>
+          <input type="datetime-local" id="appointment-date" 
+            class="w-full border-2 p-1 rounded my-1" 
+            min="2025-01-01T09:00" />
+          <p class="text-red-500 hidden" id="date-warn">Por favor, selecione uma data e horário válidos!</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between mt-5 w-full">
+        <button id="close-modal-btn">Fechar</button>
+        <button id="chekout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
+      </div>
+    </div>
+  </div>
+  <!-- Aqui termina a part onde voce Finaliza o Pedido-->
+
+  <!-- Aqui começa o nosso veja meu carrinho -->
+  <footer class="w-full bg-neutral-900 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+    <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+      (<span id="cart-count">0</span>)
+      VEJA MEU CARRINHO
+      <i class="fa fa-cart-plus text-lg text-white"></i>
+    </button>
+  </footer>
+  <!-- Aqui finaliza o nosso  veja meu carrinho -->
+  </div>
+  <div style="
+bottom: 0;
+left: 0;
+margin: 70px;
+background-color: #1a1a1a; /* Cor de fundo equivalente a bg-neutral-900 */
+padding: 0.5rem 1rem; /* Equivalent to px-4 py-1 */
+border-radius: 0.5rem; /* Equivalent to rounded-lg */
+">
+    <button id="abrir-insta" class=" text-white text-lg ">Siga-nos no instagram: @amandaborges.beauty</button>
+  </div>
+  <!--Importando as funcionalidades JavaScript-->
+  <script src="script.js">
+    // JavaScript para incrementar o contador do carrinho
+    document.addEventListener('DOMContentLoaded', (event) => {
+      const cartCount = document.getElementById('cart-count');
+      const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          cartCount.innerText = parseInt(cartCount.innerText) + 1;
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
