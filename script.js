@@ -187,7 +187,7 @@ checKoutBtn.addEventListener("click", function(){
     });
 
     // Codificar a mensagem e o número de telefone
-    const phone = "5562991390313";
+    const phone = "55629999999";
     const cartMessage = encodeURIComponent(cartItems);
     const formattedDateTime = encodeURIComponent(formattedDate.replace(",", " às"));
     
@@ -245,5 +245,5 @@ if(isOpen){
 
 // Criando o clique do insta 
  abrirInsta.addEventListener("click", function () {
-    window.open("https://www.instagram.com/amandaborges.beauty/") 
+    window.open("https://www.instagram.com/_gb.tavares_/") 
 })
